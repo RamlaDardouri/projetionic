@@ -1,13 +1,60 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>update-plat</ion-title>
+  <ion-toolbar color="success">
+    <ion-title class="center-title">Modifier le plat</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" class="custom-back-button"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">update-plat</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-margin">
+    <form #f="ngForm" class="centered-form" (ngSubmit)="onSubmit(f)">
+      <ion-label>Nom de plat <span style="color: red;">*</span></ion-label>
+      <ion-input
+        class="input-size"
+        ngModel
+        required
+        name="nomPlat"
+        type="text"
+        [(ngModel)]="nomPlat"
+      ></ion-input>
+
+      <ion-label>Chef <span style="color: red;">*</span></ion-label>
+      <ion-input
+        class="input-size"
+        ngModel
+        required
+        name="chef"
+        type="text"
+        [(ngModel)]="chef"
+      ></ion-input>
+
+      <ion-img [src]="selectedPlat?.image"></ion-img>
+
+      <ion-label>Prix <span style="color: red;">*</span></ion-label>
+      <ion-input
+        class="input-size"
+        ngModel
+        required
+        name="prix"
+        type="text"
+        [(ngModel)]="prix"
+      ></ion-input>
+
+      <ion-label>Ingrédients <span style="color: red;">*</span></ion-label>
+      <ion-input
+        class="input-size"
+        required
+        ngModel
+        name="ingredient"
+        type="text"
+        [(ngModel)]="ingredients" 
+      ></ion-input> <!-- Join for display -->
+
+      <ion-button color="success" [disabled]="f.invalid" type="submit" expand="full">
+        Confirmer
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

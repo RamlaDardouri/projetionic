@@ -41,7 +41,12 @@ export class GestionPlatService {
     return this.allPlats;
   }
 
-
+  updatePlat(updatedPlat: Plat): void {
+    const index = this.allPlats.findIndex(plat => plat.id === updatedPlat.id);
+    if (index !== -1) {
+      this.allPlats[index] = updatedPlat; 
+    }
+  }
 
   constructor() {}
 }

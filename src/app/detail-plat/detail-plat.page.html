@@ -40,6 +40,13 @@
       <ion-button color="danger" (click)="presentAlert()">
         Supprimer
       </ion-button>
+      <ion-button
+      color="success"
+      [routerLink]="['/update-plat', selectedPlat?.id]"
+    >
+      Modifier
+    </ion-button>
     </div>
+
   </div>
 </ion-content>

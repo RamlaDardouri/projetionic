@@ -25,7 +25,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'update-plat',
+    path: 'update-plat/:id', // Add :id here to expect an ID parameter
     loadChildren: () => import('./update-plat/update-plat.module').then( m => m.UpdatePlatPageModule)
   },
 ];

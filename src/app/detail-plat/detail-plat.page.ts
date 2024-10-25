@@ -28,6 +28,11 @@ export class DetailPlatPage implements OnInit {
     );
   }
 
+  navigateToUpdate() {
+    if (this.selectedPlat && this.selectedPlat.id !== undefined) {
+      this.router.navigate(['/update-plat', this.selectedPlat.id]);
+    }
+  }
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Confirmation',
