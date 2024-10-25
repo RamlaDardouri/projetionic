@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title class="center-title">Détails</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" class="custom-back-button"></ion-back-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-margin">
+    <strong>Detail de plat :</strong>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" offset="4">
+          <ion-img [src]="selectedPlat?.image"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h3 class="ion-text-center">
+      {{ selectedPlat?.nomPlat }} préparé par le(a) chef {{ selectedPlat?.chef }} <br>
+      <strong>prix: {{selectedPlat?.prix}}</strong>
+    </h3>
+    --------------------------------------------------------------------------------------------------
+    <br>
+    <div >
+      <strong class="text-center">Les ingrédients:</strong>
+      <ion-list class="center-list">
+        <ng-container *ngFor="let ing of selectedPlat?.ingredient; let i = index">
+          <ion-item class="center-item">
+            <ion-label> {{ ing }} </ion-label>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </div>
+
+    <div class="button-container">
+      <ion-button color="danger" (click)="presentAlert()">
+        Supprimer
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

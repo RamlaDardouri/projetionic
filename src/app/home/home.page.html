@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="success">
+    <ion-title class="center-title">Bienvenue à notre restaurant "À la tunisienne"</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="text-center">
+    <strong>Nos plats</strong>
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <br><br>
+  <ion-list class="center-list">
+    <ng-container *ngFor="let Plat of tabPlats; let i = index">
+      <ion-item [routerLink]="['/details', Plat.id]" class="Plat-item-container">
+        <ion-avatar class="ion-margin-start avatar-center">
+          <img [src]="Plat.image" />
+        </ion-avatar>
+        <ion-label class="ion-margin-start">{{ Plat.nomPlat }}</ion-label>
+
+        <!-- Bouton de suppression aligné à droite -->
+
+      </ion-item>
+
+    </ng-container>
+  </ion-list>
+
+  <div class="button-container">
+    <ion-button color="success" routerLink="/add" type="submit">
+      Ajouter nouveau plat
+    </ion-button>
   </div>
 </ion-content>

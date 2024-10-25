@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title class="center-title">Ajouter un nouveau plat </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" class="custom-back-button"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-margin">
+    <form #f="ngForm" class="centered-form">
+      <ion-label> Nom de plat
+        <span style="color: red;">*</span>
+      </ion-label>
+      <ion-input class="input-size" ngModel required name="nomPlat" type="text"></ion-input>
+
+      <ion-label> Chef
+        <span style="color: red;">*</span>
+      </ion-label>
+      <ion-input class="input-size" ngModel required name="chef" type="text"></ion-input>
+
+      <ion-label> Image
+        <span style="color: red;">*</span>
+      </ion-label>
+      <ion-input class="input-size" ngModel required name="image" type="url"></ion-input>
+
+      <ion-label> Prix
+        <span style="color: red;">*</span>
+      </ion-label>
+      <ion-input class="input-size" ngModel required name="prix" type="text"></ion-input>
+
+
+
+      <ion-label> Ingredients <span style="color: red;">*</span></ion-label>
+      <ion-input class="input-size" required ngModel name="ingredient" type="text"></ion-input>
+
+
+
+      <ion-button color="success"
+        [disabled]="f.invalid"
+        (click)="onSubmit(f.value)"
+        type="submit"
+        expand="full"
+      >
+        Confirmer
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

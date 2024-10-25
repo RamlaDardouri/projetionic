@@ -1,27 +1,101 @@
+
+.text-center {
+  display: block; /* Assure que l'élément prend toute la largeur */
+  text-align: center;
+  font-size: 35px; /* Centre le texte */
+}
+
+/* Conteneur principal centré */
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre horizontalement tous les éléments */
 }
 
+/* Style pour le titre */
 #container strong {
   font-size: 20px;
   line-height: 26px;
+  margin-bottom: 10px; /* Ajoute un espacement en bas */
 }
 
+/* Style pour les paragraphes */
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
+/* Liens sans soulignement */
 #container a {
   text-decoration: none;
+}
+
+/* Titre centré */
+.center-title {
+  text-align: center;
+  color: white; /* Centre le texte dans le titre */
+}
+
+/* Contenu centré */
+.center-content {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre horizontalement tous les éléments */
+  justify-content: center; /* Centre verticalement tous les éléments */
+  height: 100%; /* S'assure que le conteneur prend toute la hauteur */
+}
+
+/* Liste centrée */
+.center-list {
+  width: 100%; /* Permet à la liste de prendre toute la largeur */
+  display: flex;
+  flex-direction: column; /* Affiche les éléments de la liste verticalement */
+  align-items: center; /* Centre les éléments de la liste horizontalement */
+}
+
+/* Éléments de liste centrés */
+.center-item {
+  display: flex; /* Utilise flexbox pour centrer le contenu */
+  justify-content: center; /* Centre le contenu des éléments de la liste */
+  text-align: center; /* Centre le texte dans chaque élément */
+  width: 100%; /* Assure que l'élément de liste prend toute la largeur */
+}
+
+/* Avatar centré */
+.avatar-center {
+  display: flex;
+  justify-content: center; /* Centre l'avatar horizontalement */
+  align-items: center; /* Centre l'avatar verticalement */
+  width: 50px; /* Définit une largeur pour l'avatar (ajustez selon vos besoins) */
+  height: 50px; /* Définit une hauteur pour l'avatar (ajustez selon vos besoins) */
+}
+
+
+
+/* Taille du conteneur des éléments */
+.course-item-container {
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  align-items: center; /* Centre les éléments verticalement */
+  width: 100%; /* Largeur de 100% pour prendre toute la largeur disponible */
+  max-width: 400px; /* Limite la largeur maximale à 400 pixels (ajustez selon vos besoins) */
+  height: 70px; /* Hauteur fixe pour chaque élément (ajustez selon vos besoins) */
+  margin: 10px auto; /* Centre chaque élément horizontalement avec un espacement vertical */
+  padding: 10px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure pour visualiser le conteneur */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+}
+
+.button-container {
+  display: flex;             /* Utiliser flexbox */
+  justify-content: center;   /* Centrer horizontalement */
+  margin-top: 20px;         /* Espacement optionnel */
 }

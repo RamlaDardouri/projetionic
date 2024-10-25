@@ -1,0 +1,42 @@
+.center-title {
+  text-align: center;
+  color: white; /* Centre le texte dans le titre */
+}
+
+
+.custom-back-button {
+  color: white; /* Mettre la couleur de l'icône en blanc */
+}
+
+
+.text-center {
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-item {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.button-container {
+  display: flex;             /* Utiliser flexbox */
+  justify-content: center;   /* Centrer horizontalement */
+  margin-top: 20px;         /* Espacement optionnel */
+}
