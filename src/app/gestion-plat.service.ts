@@ -18,7 +18,14 @@ export class GestionPlatService {
      12,
           ['legume', 'viande']
     ),
-
+    new Plat(
+      2,
+      'brik',
+      'khawla',
+      'https://choumicha.ma/images/recettes/Briks-au-poulet.jpg',
+     12,
+          ['pate', 'pomme de terre']
+    ),
 
   ];
 

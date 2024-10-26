@@ -31,6 +31,15 @@
       ></ion-input>
 
       <ion-img [src]="selectedPlat?.image"></ion-img>
+      <ion-label>Image url <span style="color: red;">*</span></ion-label>
+      <ion-input
+        class="input-size"
+        ngModel
+        required
+        name="image"
+        type="text"
+        [(ngModel)]="image"
+      ></ion-input>
 
       <ion-label>Prix <span style="color: red;">*</span></ion-label>
       <ion-input
