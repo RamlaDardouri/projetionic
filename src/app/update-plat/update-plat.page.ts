@@ -31,7 +31,7 @@ export class UpdatePlatPage implements OnInit {
         this.chef = this.selectedPlat.chef;
         this.image = this.selectedPlat.image;
         this.prix = this.selectedPlat.prix;
-        this.ingredients = this.selectedPlat.ingredient.join(', '); // Join for display
+        this.ingredients = this.selectedPlat.ingredient.join(', '); 
       }
     }
   }
@@ -44,10 +44,10 @@ export class UpdatePlatPage implements OnInit {
         chef: this.chef,
         image: this.image,
         prix: this.prix,
-        ingredient: this.ingredients.split(','), // Assuming ingredients are comma-separated
+        ingredient: this.ingredients.split(','), 
       };
       this.platService.updatePlat(updatedPlat);
-      this.router.navigate(['/home']); // Redirect after update
+      this.router.navigate(['/home']); 
     }
   }
 }
