@@ -36,7 +36,7 @@ export class DetailPlatPage implements OnInit {
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Confirmation',
-      message: 'Etes-vous sûr de vouloir supprimer ce cours ?',
+      message: 'Etes-vous sûr de vouloir supprimer ce plat ?',
       buttons: [
         {
           text: 'Oui',
